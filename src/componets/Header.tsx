@@ -1,13 +1,13 @@
-import { Link } from 'react-router-dom';
 import NavTag from './Nav';
+import '../styleSheets/header.css'
 export default function Header() {
 
     return (
         <>
-        <div>
-            <h1>Harbor Lookout</h1>
+        <div className="container">
+            <h1 className='title'>Harbor Lookout</h1>
             <NavTag/>
-            <h2>Rba</h2>
+            <h2 className='rbaHeader'>Rba</h2>
         </div>
         </>
 

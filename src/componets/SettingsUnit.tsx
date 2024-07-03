@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../App.css'
+import '../styleSheets/App.css'
 const UnitSettings: React.FC = () => {
     const [selectedOption, setSelectedOption] = useState<number | null>(null);
 
@@ -14,7 +14,7 @@ const UnitSettings: React.FC = () => {
                 className={selectedOption === 1 ? 'highlighted' : ''}
                 onClick={() => handleOptionClick(1)}
             >
-               Nautical
+                Nautical
             </button>
             <button
                 className={selectedOption === 2 ? 'highlighted' : ''}

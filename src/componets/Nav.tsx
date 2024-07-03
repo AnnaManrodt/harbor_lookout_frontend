@@ -6,7 +6,7 @@ export default function NavTags() {
         <>
         <div>
             <nav>
-                <ul>
+                <ul className="nav-list">
                     <li>
                     <Link to="/ships">Ships</Link>
                     </li>

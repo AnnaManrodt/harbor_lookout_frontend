@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title{
+    margin-right: 10px;
+}
+
+.rbaHeader{
+    margin-left: auto;
+}
+
+.nav-list {
+    list-style-type: none; /* Remove bullet points */
+    display: flex; /* Use flexbox to display items side by side */
+}
+
+.nav-list li {
+    margin-right: 10px; /* Add margin between list items */
+}
