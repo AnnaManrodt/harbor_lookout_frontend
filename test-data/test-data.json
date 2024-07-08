@@ -1,0 +1,157 @@
+[
+    {
+        "id": 0,
+        "name": "Indiana Harbor",
+        "imo": 7514701,
+        "mmsi": 366904000,
+        "yearBuilt": 1979,
+        "flagUrl": "https://harborlookout.com/Content/Flags/us.svg",
+        "country": "United States",
+        "shipType": "Cargo",
+        "shipImageUrl": "https://rbaduluthcanal.blob.core.windows.net/hl-images-dev/INDIANA%20HARBOR.jpeg",
+        "length": 1000,
+        "width": 15,
+        "draught": 23,
+        "schedule": {
+            "cargoType": "Coal",
+            "destinationDisplayName": "Duluth Entry",
+            "anchoringOnArrival": false,
+            "arrival": "2024-07-05T16:29:46.976Z",
+            "departure": "2024-07-06T16:29:46.976Z",
+            "arrivalDisplayName": "Evening",
+            "departureDisplayName": "Evening"
+        },
+        "lastPosition": {
+            "latitude": "46.74269",
+            "longitude": "-92.11508",
+            "heading": "66",
+            "speed": "0.0",
+            "lastUpdated": "2024-07-05T16:29:46.977Z"
+        },
+        "shipNote": "test data #1"
+    },
+    {
+        "id": 1,
+        "name": "Federal Beaufort",
+        "imo": 9697818,
+        "mmsi": 538005000,
+        "yearBuilt": null,
+        "flagUrl": "https://harborlookout.com/Content/Flags/mh.svg",
+        "country": "Marshall Islands",
+        "shipType": "Cargo",
+        "shipImageUrl": "",
+        "length": 656,
+        "width": 78,
+        "draught": 27,
+        "schedule": {
+            "cargoType": "",
+            "destinationDisplayName": "Duluth Entry",
+            "anchoringOnArrival": true,
+            "arrival": "2024-07-06T16:29:46.976Z",
+            "departure": "2024-07-08T16:29:46.976Z",
+            "arrivalDisplayName": "Evening",
+            "departureDisplayName": "Evening"
+        },
+        "lastPosition": {
+            "latitude": "46.78047",
+            "longitude": "-92.05891",
+            "heading": "82",
+            "speed": "0.0",
+            "lastUpdated": "2024-07-05T16:29:46.977Z"
+        },
+        "shipNote": "test data #2"
+    },
+    {
+        "id": 2,
+        "name": "Burns Harbor",
+        "imo": 7514713,
+        "mmsi": 366998300,
+        "yearBuilt": 1980,
+        "flagUrl": "https://harborlookout.com/Content/Flags/us.svg",
+        "country": "United States",
+        "shipType": "Cargo",
+        "shipImageUrl": "https://rbaduluthcanal.blob.core.windows.net/hl-images-dev/BURNS%20HARBOR.jpeg",
+        "length": 1000,
+        "width": 105,
+        "draught": 27,
+        "schedule": {
+            "cargoType": "Iron Ore Pellets",
+            "destinationDisplayName": "Superior Entry",
+            "anchoringOnArrival": false,
+            "arrival": "2024-07-06T16:29:46.976Z",
+            "departure": "2024-07-08T16:29:46.976Z",
+            "arrivalDisplayName": "Morning",
+            "departureDisplayName": "Early Afternoon"
+        },
+        "lastPosition": {
+            "latitude": "",
+            "longitude": "",
+            "heading": "",
+            "speed": "",
+            "lastUpdated": ""
+        },
+        "shipNote": "test data #3"
+    },
+    {
+        "id": 3,
+        "name": "American Integrity",
+        "imo": 7514696,
+        "mmsi": 3669045461,
+        "yearBuilt": 1978,
+        "flagUrl": "https://harborlookout.com/Content/Flags/us.svg",
+        "country": "United States",
+        "shipType": "Cargo",
+        "shipImageUrl": "https://rbaduluthcanal.blob.core.windows.net/hl-images-dev/AMERICAN%20INTEGRITY.jpeg",
+        "length": 1000,
+        "width": 105,
+        "draught": 28,
+        "schedule": {
+            "cargoType": "Iron Ore Pellets",
+            "destinationDisplayName": "Two Harbors MN",
+            "anchoringOnArrival": false,
+            "arrival": "2024-07-05T16:29:46.976Z",
+            "departure": "2024-07-08T16:29:46.976Z",
+            "arrivalDisplayName": "Late Afternoon",
+            "departureDisplayName": "Early Afternoon"
+        },
+        "lastPosition": {
+            "latitude": "",
+            "longitude": "",
+            "heading": "",
+            "speed": "",
+            "lastUpdated": ""
+        },
+        "shipNote": "test data #4"
+    },
+    {
+        "id": 4,
+        "name": "Algoma Bear",
+        "imo": 9619309,
+        "mmsi": 313954000,
+        "yearBuilt": null,
+        "flagUrl": "https://harborlookout.com/Content/Flags/ca.svg",
+        "country": "Canada",
+        "shipType": "Cargo",
+        "shipImageUrl": "",
+        "length": 740,
+        "width": 78,
+        "draught": 22,
+        "schedule": {
+            "cargoType": "Iron Ore Pellets",
+            "destinationDisplayName": "Two Harbors MN",
+            "anchoringOnArrival": false,
+            "arrival": "2024-07-07T16:29:46.976Z",
+            "departure": "",
+            "arrivalDisplayName": "Early Morning",
+            "departureDisplayName": ""
+        },
+        "lastPosition": {
+            "latitude": "",
+            "longitude": "",
+            "heading": "",
+            "speed": "",
+            "lastUpdated": ""
+        },
+        "shipNote": "test data #5"
+    }
+]

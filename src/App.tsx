@@ -6,6 +6,7 @@ import AboutPage from "./pages/About"
 import MapPage from "./pages/Map"
 import SettingsPage from "./pages/Settings"
 import ShipPage from "./pages/Ships"
+import SingleShipPage from "./pages/SingleShipPage"
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/map" element={<MapPage/>}/>
         <Route path="/settings" element={<SettingsPage/>}/>
         <Route path="/about" element={<AboutPage/>}/>
+        <Route path="/ships/:id" element={<SingleShipPage/>}/>
         
       </Routes>
       </BrowserRouter>

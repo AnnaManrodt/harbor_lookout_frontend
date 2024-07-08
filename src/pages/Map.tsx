@@ -24,8 +24,8 @@ export default function MapPage() {
                 const popupContent = `
                     <div>
                     <h3>Duluth Bayfront Cam</h3>
-                        <a href="https://www.youtube.com/watch?v=vqCD00PD5pk">Click to view live camera</a>
-                        <img src="https://picsum.photos/200/300" alt="Image">
+                        <a href="https://www.youtube.com/watch?v=vqCD00PD5pk" onclick="window.open(this.href); return false;">Click to view live camera</a>
+                        <img src="https://picsum.photos/200/300" alt="Image" class="camImg">
                     </div>
                 `;
                 this.bindPopup(popupContent).openPopup();
@@ -36,8 +36,8 @@ export default function MapPage() {
                 const popupContent = `
                     <div>
                     <h3>Duluth Hillside Cam</h3>
-                        <a href="https://www.youtube.com/watch?v=DzJb26edNjs">Click to view live camera</a>
-                        <img src="https://picsum.photos/200/300" alt="Image">
+                        <a href="https://www.youtube.com/watch?v=DzJb26edNjs" onclick="window.open(this.href); return false;">Click to view live camera</a>
+                        <img src="https://picsum.photos/200/300" alt="Image" class="camImg">
                     </div>
                 `;
                 this.bindPopup(popupContent).openPopup();
@@ -48,8 +48,8 @@ export default function MapPage() {
                 const popupContent = `
                     <div>
                     <h3>Great Lake Aquarium Cam</h3>
-                        <a href="https://www.youtube.com/watch?v=T1Dm51TaWMY">Click to view live camera</a>
-                        <img src="https://picsum.photos/200/300" alt="Image">
+                        <a href="https://www.youtube.com/watch?v=T1Dm51TaWMY" onclick="window.open(this.href); return false;">Click to view live camera</a>
+                        <img src="https://picsum.photos/200/300" alt="Image" class="camImg">
                     </div>
                 `;
                 this.bindPopup(popupContent).openPopup();
@@ -60,8 +60,8 @@ export default function MapPage() {
                 const popupContent = `
                     <div>
                     <h3>Duluth Aerial Lift Bridge Cam</h3>
-                        <a href="https://www.youtube.com/watch?v=BzwWjdZXymc">Click to view live camera</a>
-                        <img src="https://picsum.photos/200/300" alt="Image">
+                        <a href="https://www.youtube.com/watch?v=BzwWjdZXymc" onclick="window.open(this.href); return false;">Click to view live camera</a>
+                        <img src="https://picsum.photos/200/300" alt="Image" class="camImg">
                     </div>
                 `;
                 this.bindPopup(popupContent).openPopup();
@@ -72,8 +72,8 @@ export default function MapPage() {
                 const popupContent = `
                     <div>
                     <h3>Duluth Canal Cam</h3>
-                        <a href="https://www.youtube.com/watch?v=9k_sg8rhsgk">Click to view live camera</a>
-                        <img src="https://picsum.photos/200/300" alt="Image">
+                        <a href="https://www.youtube.com/watch?v=9k_sg8rhsgk" onclick="window.open(this.href); return false;">Click to view live camera</a>
+                        <img src="https://picsum.photos/200/300" alt="Image" class="camImg">
                     </div>
                 `;
                 this.bindPopup(popupContent).openPopup();
@@ -84,8 +84,8 @@ export default function MapPage() {
                 const popupContent = `
                     <div>
                     <h3>Duluth Western Harbor Cam</h3>
-                        <a href="https://www.youtube.com/watch?v=kNyX6Wn6-4M">Click to view live camera</a>
-                        <img src="https://picsum.photos/200/300" alt="Image">
+                        <a href="https://www.youtube.com/watch?v=kNyX6Wn6-4M" onclick="window.open(this.href); return false;">Click to view live camera</a>
+                        <img src="https://picsum.photos/200/300" alt="Image" class="camImg">
                     </div>
                 `;
                 this.bindPopup(popupContent).openPopup();
@@ -96,19 +96,17 @@ export default function MapPage() {
                 const popupContent = `
                     <div>
                     <h3>Duluth Harbor Cam</h3>
-                        <a href="https://www.youtube.com/watch?v=05WivhRmKq4">Click to view live camera</a>
-                        <img src="https://picsum.photos/200/300" alt="Image">
+                        <a href="https://www.youtube.com/watch?v=05WivhRmKq4" onclick="window.open(this.href); return false;">Click to view live camera</a>
+                        <img src="https://picsum.photos/200/300" alt="Image" class="camImg">
                     </div>
                 `;
                 this.bindPopup(popupContent).openPopup();
             });
-
-            
-
-            
         }
 
         // Additional logic for creating markers and updating positions
+
+        
 
         return () => {
             if (mapRef.current) {
