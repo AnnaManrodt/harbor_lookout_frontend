@@ -1,5 +1,5 @@
 import UnitSettings from "../componets/SettingsUnit"
-import DetailSettings from "../componets/SettingDetails"
+import SettingsDetails from "../componets/SettingDetails"
 
 export default function SettingsPage(){
 
@@ -7,7 +7,7 @@ export default function SettingsPage(){
         <>
         <h1>Settings</h1>
         <UnitSettings/>
-        <DetailSettings/>
+        <SettingsDetails/>
         </>
     )
 }

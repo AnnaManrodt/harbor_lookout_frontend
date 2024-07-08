@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../styleSheets/App.css'
 
 
-const DetailSettings: React.FC = () => {
+const SettingsDetails: React.FC = () => {
     const [selectedOption, setSelectedOption] = useState<number | null>(null);
 
     const handleOptionClick = (option: number) => {
@@ -27,4 +27,4 @@ const DetailSettings: React.FC = () => {
         </div>
     );
 };
-export default DetailSettings;
+export default SettingsDetails;

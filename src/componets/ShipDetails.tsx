@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 interface ShipDetailsProps {
     id: string;
@@ -18,39 +18,43 @@ interface Ship {
 }
 
 const ShipDetails: React.FC<ShipDetailsProps> = () => {
-    const { id } = useParams();
-    const [ship, setShip] = useState<Ship | null>(null);
+    const { id } = useParams<{ id: string }>(); // Extract id from URL params
+    const [item, setItem] = useState<Ship | null>(null);
 
     useEffect(() => {
-        fetch('test-data/test-data.json')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
+        const fetchData = async () => {
+            try {
+                const response = await fetch('/test-data/test-data.json');
+                if (response.ok) {
+                    const data = await response.json();
+                    const selectedItem = data.find((item: Ship) => item.id.toString() === id);
+                    setItem(selectedItem);
+                } else {
+                    console.error('Failed to fetch data. Status:', response.status);
                 }
-                return response.json();
-            })
-            .then((data: Ship[]) => {
-                const selectedShip = data.find(ship => ship.id === parseInt(id, 10));
-                setShip(selectedShip || null);
-            })
-            .catch(error => {
-                console.error('There was a problem with your fetch operation:', error);
-            });
-    }, [id]);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
 
-    if (!ship) {
-        return <div>Loading...</div>;
-    }
+        fetchData();
+    }, [id]);
 
     return (
         <div>
-            <h2>{ship.name}</h2>
-            <p>Size: {ship.length} x {ship.width}</p>
-            <p>Type: {ship.shipType}</p>
-            <p>Year Built: {ship.yearBuilt}</p>
-            <p>Draught: {ship.draught}</p>
-            <p>Cargo: {ship.cargo}</p>
-            <img src={ship.flagUrl} className='flagType' alt='Flag' />
+            {item ? (
+                <div>
+                    <h2>{item.name}</h2>
+                    <p>Size: {item.length} x {item.width}</p>
+                            <p>Type: {item.shipType}</p>
+                            <p>Year Built: {item.yearBuilt}</p>
+                            <p>Draught: {item.draught}</p>
+                            <p>Cargo: {item.cargo}</p>
+                            <img src={item.flagUrl} className='flagType' alt='Flag'/>
+                </div>
+            ) : (
+                <p>Loading...</p>
+            )}
         </div>
     );
 };
