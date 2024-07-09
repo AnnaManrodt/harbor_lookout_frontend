@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-
+import '../styleSheets/shipdetails.css'
 interface ShipDetailsProps {
     id: string;
 }
@@ -13,8 +13,24 @@ interface Ship {
     shipType: string;
     yearBuilt: number;
     draught: number;
-    cargo: string;
     flagUrl: string;
+    shipImageUrl: string;
+    country: string;
+    imo: number;
+    mmsi: number;
+    schedule: {
+        destinationDisplayName: string;
+        departure: string;
+        cargoType: string;
+    },
+    lastPosition: {
+        lastUpdated: string;
+        latitude: string;
+        longitude: string;
+        heading: string;
+        speed: string;
+
+    }
 }
 
 const ShipDetails: React.FC<ShipDetailsProps> = () => {
@@ -44,13 +60,30 @@ const ShipDetails: React.FC<ShipDetailsProps> = () => {
         <div>
             {item ? (
                 <div>
-                    <h2>{item.name}</h2>
+                    <section className='header'>
+                        <h2>Ship {item.name}</h2>
+                        <img src={item.flagUrl} className='flagType' alt='Flag' />
+                        <img src={item.shipImageUrl} className='flagType' alt='Img of Ship' />
+                    </section>
+                    <h4>Transit Information </h4>
+                    <p>Destination: {item.schedule.destinationDisplayName}</p>
+                    <p>ETD {item.schedule.departure}</p>
+                    <p>Last Report {item.lastPosition.lastUpdated}</p>
                     <p>Size: {item.length} x {item.width}</p>
-                            <p>Type: {item.shipType}</p>
-                            <p>Year Built: {item.yearBuilt}</p>
-                            <p>Draught: {item.draught}</p>
-                            <p>Cargo: {item.cargo}</p>
-                            <img src={item.flagUrl} className='flagType' alt='Flag'/>
+                    <p>Lat/long {item.lastPosition.latitude}/{item.lastPosition.longitude}</p>
+                    <p>Course/Speed {item.lastPosition.heading}°/{item.lastPosition.speed}kn</p>
+                    <p>Distance idk what this is</p>
+                    <p>Draught: {item.draught}</p>
+                    <p>Status not sure</p>
+                    <p>Cargo: {item.schedule.cargoType}</p>
+                    <h4>Vessel Information</h4>
+                    <p>Country {item.country}</p>
+                    <p>Type {item.shipType}</p>
+                    <p>Year Built {item.yearBuilt}</p>
+                    <p>Year Built: {item.yearBuilt}</p>
+                    <p>Size {item.length} x {item.width}</p>
+                    <p>IMO {item.imo}</p>
+                    <p>MMSI {item.mmsi}</p>
                 </div>
             ) : (
                 <p>Loading...</p>

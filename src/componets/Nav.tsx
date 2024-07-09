@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 
+//this file is a component for the nav tags 
+
 export default function NavTags() {
 
     return (

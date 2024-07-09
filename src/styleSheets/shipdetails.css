@@ -1,0 +1,11 @@
+.header{
+display: flex;
+flex-direction: column;
+}
+
+
+.flagType{
+    max-width: 10%;
+    max-height: 10%;
+  padding: 10px;
+  }

@@ -1,4 +1,6 @@
 import React from 'react';
+import '../styleSheets/about.css'
+//this file is a component that displays the info for the about page
 
 interface CustomComponentProps {
     title: string;
@@ -11,7 +13,7 @@ const CustomComponent: React.FC<CustomComponentProps> = ({ title, paragraph, ima
         <div>
             <h2>{title}</h2>
             <p>{paragraph}</p>
-            <img src={imageUrl} alt="Custom Image" />
+            <img src={imageUrl} alt="Custom Image" className='aboutImgs' />
         </div>
     );
 };

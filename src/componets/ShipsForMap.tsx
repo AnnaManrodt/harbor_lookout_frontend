@@ -7,7 +7,7 @@ interface ShipsForMapProps {
 
 const ShipsForMap: React.FC<ShipsForMapProps> = ({ position }) => {
     useEffect(() => {
-        const map = L.map('mapid');
+        const map = L.map('shipsM');
         L.marker(position).addTo(map);
     }, [position]);
 

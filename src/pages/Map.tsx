@@ -1,8 +1,7 @@
 import 'leaflet/dist/leaflet.css';
 import { useEffect, useRef, useState } from 'react';
 import L, { Icon, LatLngExpression, Map, Marker } from 'leaflet';
-import { IoCameraSharp } from "react-icons/io5";
-import ShipsForMap from '../componets/ShipsForMap';
+// import ShipsForMap from '../componets/ShipsForMap';
 
 export default function MapPage() {
     const mapRef = useRef<Map | null>(null);
@@ -59,9 +58,11 @@ export default function MapPage() {
                 const position: LatLngExpression = [ship.lastPosition.latitude, ship.lastPosition.longitude];
                 const customIcon = L.icon({
                     iconUrl: 'https://img.icons8.com/?size=100&id=24194&format=png&color=000000',
-                    iconSize: [30, 25],
+                    iconSize: [31, 25],
                 });
-                L.marker(position, { icon: customIcon }).addTo(mapRef.current);
+                if (mapRef.current) {
+    L.marker(position, { icon: customIcon }).addTo(mapRef.current as Map);
+}
             });
 
 
